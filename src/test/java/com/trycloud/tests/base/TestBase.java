@@ -20,9 +20,17 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://qa3.trycloud.net");
-        driver.findElement(By.id("user")).sendKeys("User59");
-        driver.findElement(By.id("password")).sendKeys("Userpass123");
-        driver.findElement(By.id("submit-form")).click();
+
+        String username = "User29";
+        String password = "Userpass123";
+
+
+        WebElement usernameButton = driver.findElement(By.xpath("//input[@id='user']"));
+        usernameButton.sendKeys(username);
+        WebElement passwordButton = driver.findElement(By.xpath("//input[@id='password']"));
+        passwordButton.sendKeys(password);
+        WebElement loginButton = driver.findElement(By.xpath("//input[@id='submit-form']"));
+        loginButton.click();
     }
 
 
