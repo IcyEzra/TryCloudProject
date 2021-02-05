@@ -10,7 +10,6 @@ public class UserStory5TestCase1 extends TestBase{
     public void user_access_contacts_module() throws InterruptedException {
 
         driver.findElement(By.xpath("//a[@aria-label='Contacts']")).click();
-        Thread.sleep(10000);
         String expectedTile = "Contacts";
         String actualTitle = driver.getTitle();
         System.out.println("actualTitle = " + actualTitle);
