@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class UserStory_1 extends TestBase {
+public class UserStory_3 extends TestBase {
 
 
 
@@ -19,7 +19,7 @@ public class UserStory_1 extends TestBase {
         fileButton.click();
 
         String actualFileTitle = driver.getTitle();
-        String expectedFileTitle = "Files - Trycloud";
+        String expectedFileTitle = "Files - Trycloud QA";
 
         Assert.assertEquals(actualFileTitle,expectedFileTitle, "Displayed Title is not match. FAILED!!!");
 
@@ -47,11 +47,3 @@ public class UserStory_1 extends TestBase {
     }
 
 }
-/*
-Test case #1 - verify user login successfully
-1.Navigate to login page http://qa.trycloud.net/index.php/login?clear=1
-2.Enter valid username
-3.Enter valid password
-4.Click login button
-5.Verify the URL is chawed to homepage’s url(Put this test case in testBase class with an annotation so it runs for all the test case)
- */
