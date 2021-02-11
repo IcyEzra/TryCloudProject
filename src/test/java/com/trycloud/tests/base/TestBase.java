@@ -109,7 +109,7 @@ public abstract class TestBase {
             e.printStackTrace();
         }
 
-       // driver.close();
+        driver.close();
     }
 }
 

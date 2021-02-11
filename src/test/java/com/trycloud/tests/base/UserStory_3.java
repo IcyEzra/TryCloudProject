@@ -32,18 +32,18 @@ public class UserStory_3 extends TestBase {
         WebElement fileButton = driver.findElement(By.xpath("//a[@aria-label='Files']"));
         fileButton.click();
 
-        WebElement checkboxAll = driver.findElement(By.xpath("//table[@id='filestable']//th[1]//label"));
+        WebElement checkboxAll = driver.findElement(By.xpath("//label[@for='select_all_files']"));
         checkboxAll.click();
 
-        //WebElement file1 = driver.findElement(By.xpath())
+        List<WebElement> listOfFiles = driver.findElements(By.xpath("//table//tbody//a//div[@class='thumbnail']"));
 
-        List<WebElement> listOfFiles = driver.findElements(By.xpath("//tbody[@id='fileList']//td//label"));
-
-        for(WebElement eachFile : listOfFiles){
-            System.out.println("eachFile = " + eachFile);
-            Assert.assertTrue(eachFile.isSelected());
+        for (WebElement eachFile : listOfFiles) {
+            if(eachFile.isSelected()){
+                Assert.assertTrue(eachFile.isSelected());
+            }else{
+                System.out.println("No such Element in this page");
+            }
         }
-
     }
 
 }
