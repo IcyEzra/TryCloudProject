@@ -22,8 +22,6 @@
         </plugins>
     </build>
 
-
-
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
