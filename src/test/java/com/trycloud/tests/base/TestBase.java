@@ -18,7 +18,9 @@ public abstract class TestBase {
     public void LogIn(){
 
         driver = WebDriverFactory.getDriver("chrome");
+
         driver.manage().window().maximize();
+
         driver.get("http://qa3.trycloud.net");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -39,7 +41,7 @@ public abstract class TestBase {
 
     public void LogIn_2(){
         driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
+     //   driver.manage().window().maximize();
         driver.get("http://qa3.trycloud.net");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -60,7 +62,7 @@ public abstract class TestBase {
 
     public void LogIn_3(){
         driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
+     //   driver.manage().window().maximize();
         driver.get("http://qa3.trycloud.net");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -81,7 +83,7 @@ public abstract class TestBase {
 
     public void LogIn_4(){
         driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
+     //   driver.manage().window().maximize();
         driver.get("http://qa3.trycloud.net");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -101,6 +103,17 @@ public abstract class TestBase {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
     @AfterMethod
     public void close(){
         try {
@@ -109,7 +122,11 @@ public abstract class TestBase {
             e.printStackTrace();
         }
 
-        driver.close();
+
+
+       driver.close();
+
+
     }
 }
 
