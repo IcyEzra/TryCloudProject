@@ -123,7 +123,9 @@ public abstract class TestBase {
         }
 
 
+
        driver.close();
+
 
     }
 }

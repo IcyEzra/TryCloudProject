@@ -32,18 +32,30 @@ public class UserStory_3 extends TestBase {
         WebElement fileButton = driver.findElement(By.xpath("//a[@aria-label='Files']"));
         fileButton.click();
 
-        WebElement checkboxAll = driver.findElement(By.xpath("//table[@id='filestable']//th[1]//label"));
+        WebElement checkboxAll = driver.findElement(By.xpath("//label[@for='select_all_files']"));
         checkboxAll.click();
 
-        //WebElement file1 = driver.findElement(By.xpath())
+        List<WebElement> listOfFiles = driver.findElements(By.xpath("//table//tbody//a//div[@class='thumbnail']"));
 
-        List<WebElement> listOfFiles = driver.findElements(By.xpath("//tbody[@id='fileList']//td//label"));
-
-        for(WebElement eachFile : listOfFiles){
-            System.out.println("eachFile = " + eachFile);
-            Assert.assertTrue(eachFile.isSelected());
+        for (WebElement eachFile : listOfFiles) {
+            if(eachFile.isSelected()){
+                Assert.assertTrue(eachFile.isSelected());
+            }else{
+                System.out.println("No such Element in this page");
+            }
         }
-
     }
 
 }
+
+/*3.Story: As a user, I should be able to access to Files module.
+Test case
+#1 - verify users can access to Files module
+1.Login as a user
+2.Verify the page tile is Files module’s tile Test case
+#2 - verify users can select all the uploaded files from the page 1.Login as a user
+2.Click the top left checkbox of the table
+3.Assert all the files are selected(Pre-condition: there should be at least
+2 files are uploaded the page)
+ */
+
